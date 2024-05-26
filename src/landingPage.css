@@ -1,7 +1,16 @@
-body{
-    background-image: linear-gradient(rgb(21, 72, 117),rgb(189, 195, 201));
-}
 
+@font-face {
+  font-family: 'titleFont';
+  src: url('./fonts/AboveDemoRegular-lJMd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'infoFont';
+    src: url('./fonts/Bandar-K7EO7.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 .header{
     display: flex;
     align-items: center;
@@ -14,16 +23,20 @@ body{
   
 }
 h1{
+    font-family: titleFont;
     text-align: center;
-    color: rgb(108, 159, 196);
-    padding-top: 3%;
+    padding-top: 5%;
+    color:aliceblue;
+    text-shadow: rgb(7, 11, 58) 5px 3px 2px;
 }
 
 .intro{
+    font-family: infoFont;
+    font-size: 150%;
+    text-align: center;
+    margin: 0 auto;
     padding: 5%;
-    font-size: 22px;
-    font-weight:500;
-    color: rgb(176, 197, 217);
+    color: rgb(203, 224, 243);
 }
 .container{
     display: flex;
@@ -33,13 +46,18 @@ h1{
 }
 
 h2{
-    color:rgb(38, 96, 144);
-    font-size: 30px;
+    font-family: titleFont;
+    text-align: center;
+    font-size: 200%;
+    text-shadow: rgb(10, 36, 59) 3px 5px 1px;
+    color:rgb(255, 255, 255);
 }
 
-li{
-    font-size: 20px;
-    color:rgb(3, 59, 95);
+li
+{
+    font-family: infoFont;
+    font-size: 150%;
+    color:rgb(217, 239, 253);
 }
 
 .rotate-container1{

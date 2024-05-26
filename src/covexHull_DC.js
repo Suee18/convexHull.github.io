@@ -89,7 +89,7 @@ const BruteForceConvexHull = () => {
             {
                 label: 'Points',
                 data: points.map(p => ({ x: p.x, y: p.y })),
-                backgroundColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(0,0,0)',
             },
             {
                 label: 'Convex Hull',
@@ -107,6 +107,7 @@ const BruteForceConvexHull = () => {
             <h2 className='title'>Convex Hull Visualization </h2>
             <div className="chart-container">
                 <Scatter data={data} options={{ responsive: true }} />
+
             </div>
             <label className='labelExplanation'>Enter the point (x,y) in the fields below then click + to view it on the chart</label>
 

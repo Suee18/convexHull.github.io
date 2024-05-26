@@ -16,7 +16,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <button className="scrollDown" onClick={scrollToBruteForce}>Visualization⬇️</button>
+               <div className='headerCoponents'> <button className="scrollDown" onClick={scrollToBruteForce}>Go to Visualization ⬇</button></div>
             </header>
             <main>
                 <LandingPage /> 

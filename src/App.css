@@ -1,24 +1,19 @@
 .App {
-  background-color: #afd2ff5d; 
- height: 100%;
+  background-image: linear-gradient(to bottom,#304352 20%, #d7d2cc 100% ); height: 100%;
 }
 
 .App-header{
-  background-color: #0a1436;
+  background-color: #0a1436b0;
   height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10rem;
+ 
 }
 .scrollDown{
-  background-color: rgba(117, 117, 101, 0.63);
+  background-color: rgba(255, 255, 255, 0.822);
   color:rgb(59, 156, 163);
-  font-family: 'Roboto', sans-serif;
-  font-size: large;
-  width:200px;
-  height:70px;
-  margin-right: 1000px;
+  
+  width:15em;
+  height:5em;
+margin-left: 90%;
   margin-top: 2px;
   cursor:pointer;
   
@@ -26,4 +21,17 @@
 .scrollDown:hover{
   background-color: rgba(219, 219, 194, 0.63);
   color: #0a1436;
+}
+.userControlPanel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 0 10rem; */
+}
+
+.headerCoponents{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rem;
+  height: 10vh;
 }
