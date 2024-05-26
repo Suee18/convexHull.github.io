@@ -1,0 +1,78 @@
+body{
+    background-image: linear-gradient(rgb(21, 72, 117),rgb(189, 195, 201));
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  
+}
+h1{
+    text-align: center;
+    color: rgb(108, 159, 196);
+    padding-top: 3%;
+}
+
+.intro{
+    padding: 5%;
+    font-size: 22px;
+    font-weight:500;
+    color: rgb(176, 197, 217);
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 3%;
+    gap: 10%;
+}
+
+h2{
+    color:rgb(38, 96, 144);
+    font-size: 30px;
+}
+
+li{
+    font-size: 20px;
+    color:rgb(3, 59, 95);
+}
+
+.rotate-container1{
+    width:200px;
+    height:200px;
+ position: absolute;
+ top:5%;
+ left: 22%;
+}
+
+#rotatingImg1{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    justify-content: flex-start;
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+    
+}
+
+.divideImg,.bruteImg{
+width: 500px;
+height: 200px;
+}
+
+.dImg,.bImg{
+    list-style: none;
+}
+@keyframes rotate{
+    form{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

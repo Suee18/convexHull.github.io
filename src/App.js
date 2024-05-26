@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+
+import React, { useRef } from 'react';
+import BruteForceConvexHull from './covexHull_DC.js'; 
+import LandingPage from './landingPage.js';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const bruteForceRef = useRef(null);
+
+    const scrollToBruteForce = () => {
+        if (bruteForceRef.current) {
+            bruteForceRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <button className="scrollDown" onClick={scrollToBruteForce}>Visualization⬇️</button>
+            </header>
+            <main>
+                <LandingPage /> 
+                <div ref={bruteForceRef}>
+                    <BruteForceConvexHull /> 
+                </div>
+            </main>
+        </div>
+    );
 }
 
 export default App;

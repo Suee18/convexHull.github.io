@@ -1,0 +1,64 @@
+.chart-container {
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+}
+
+.title {
+    font-size: 2em;
+    margin-top: 5rem;
+    margin-left: 500px;
+
+}
+
+.labelExplanation {
+    font-family: monospace;
+    font-size: 1.5em;
+    margin-top: 5rem;
+    margin-left: 300px;
+
+}
+
+.btnCompute {
+    margin-left: 2rem;
+    color: rgb(27, 27, 27);
+    background-color: #ffffff;
+    border-color: beige;
+    border-radius: 1.5rem;
+    margin-left: 600px;
+    margin-bottom: 20px;
+    width: 10rem;
+    height: 5rem;
+    cursor: pointer;
+
+}
+
+.btnCompute:hover {
+    background-color: #ff5b5b;
+}
+
+.btnAddPoint {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2rem;
+    border-radius: 2rem;
+    color: white;
+    background-color: #2dc0a0;
+    border-color: beige;
+    cursor: pointer;
+
+
+}
+
+.btnAddPoint:hover {
+    background-color: #197a65;
+}
+
+.inputPoint {
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.inputFields {
+    margin-left: 450px;
+}
