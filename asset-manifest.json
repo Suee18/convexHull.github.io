@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/convexHull.github.io/static/css/main.1a3a4d5f.css",
+    "main.js": "/convexHull.github.io/static/js/main.8a0ba9e9.js",
+    "static/js/453.ed3810f9.chunk.js": "/convexHull.github.io/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/convexHull.github.io/index.html",
+    "main.1a3a4d5f.css.map": "/convexHull.github.io/static/css/main.1a3a4d5f.css.map",
+    "main.8a0ba9e9.js.map": "/convexHull.github.io/static/js/main.8a0ba9e9.js.map",
+    "453.ed3810f9.chunk.js.map": "/convexHull.github.io/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a3a4d5f.css",
+    "static/js/main.8a0ba9e9.js"
+  ]
+}
