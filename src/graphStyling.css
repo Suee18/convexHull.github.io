@@ -1,64 +1,180 @@
 .chart-container {
-    width: 80vw;
+    width: 90vw;
     height: 70vh;
-    margin: auto;
+    margin-left: 10em;
 }
 
 .title {
     font-size: 2em;
     margin-top: 5rem;
-    margin-left: 500px;
+    margin-left: 2em;
 
 }
 
-.labelExplanation {
-    font-family: monospace;
+.labelExplanation 
+{
+font-family: infoFont;  
+  cursor:help;
     font-size: 1.5em;
     margin-top: 5rem;
-    margin-left: 300px;
+    margin-left: 12em;
 
 }
 
-.btnCompute {
-    margin-left: 2rem;
-    color: rgb(27, 27, 27);
-    background-color: #ffffff;
-    border-color: beige;
-    border-radius: 1.5rem;
-    margin-left: 600px;
-    margin-bottom: 20px;
-    width: 10rem;
-    height: 5rem;
-    cursor: pointer;
-
-}
-
-.btnCompute:hover {
-    background-color: #ff5b5b;
-}
-
-.btnAddPoint {
+.btnAddPoint 
+{
     width: 3rem;
     height: 3rem;
     margin-left: 2rem;
     border-radius: 2rem;
     color: white;
-    background-color: #2dc0a0;
+    background-color: #182746;
     border-color: beige;
     cursor: pointer;
-
-
+    font-weight: bold;
 }
 
 .btnAddPoint:hover {
-    background-color: #197a65;
+    background-color: #1f1d3a;
 }
 
-.inputPoint {
-    margin-top: 1rem;
+.inputPoint 
+{
+    /* margin-top: 1rem; */
     margin-left: 2rem;
+    background-color: aliceblue;
 }
 
-.inputFields {
+.inputFields
+{
     margin-left: 450px;
+
 }
+
+/* .aboveAllPage2{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+} */
+
+/********************compute button*****************************/
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    color: inherit;
+    width: 200px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    margin-bottom: 20px;
+    font-family: infoFont;
+
+}
+
+.btnCompute 
+{
+    border: 2px solid rgb(28, 22, 53);
+    animation: 0.5s collision ease-in;
+    overflow: hidden;
+    transition: 0.3s 0.1s;
+    margin-left:600px;
+}
+
+.btnCompute:active
+{
+    transform: translateX(100px);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.btnCompute p 
+{
+
+    position: relative;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2rem;
+    z-index: 5;
+    transition: 1s ease-in-out;
+}
+
+.btnCompute:hover p {
+    color: #fff;  
+    font-size: 10px;    
+    
+}
+
+.btnCompute:before,
+.btnCompute:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(33, 34, 75);
+}
+
+.btnCompute:hover:before {
+    animation: collisionLeft 1s both;
+    animation-direction: alternate;
+}
+
+.btnCompute:hover:after {
+    animation: collisionRight 1s both;
+    animation-direction: alternate;
+}
+
+.btnCompute:before {
+    left: -30%;
+}
+
+.btnCompute:after {
+    left: 125%;
+}
+
+@keyframes collisionLeft {
+    0% {
+        left: -30%;
+        width: 20px;
+        height: 20px;
+    }
+
+    50% {
+        left: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+    100% {
+        left: 50%;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@keyframes collisionRight {
+    0% {
+        left: 125%;
+        width: 20px;
+        height: 20px;
+    }
+
+    50% {
+        left: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+    100% {
+        left: 50%;
+        width: 300px;
+        height: 300px;
+    }
+}
+

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Scatter } from 'react-chartjs-2';
 import { Chart as ChartJS, PointElement, LineElement, LinearScale, Title, Tooltip, Legend } from 'chart.js';
 import './graphStyling.css';
+import ToolTipLabel from './ToolTipLabel';
 
 ChartJS.register(PointElement, LineElement, LinearScale, Title, Tooltip, Legend);
 
@@ -66,10 +67,11 @@ function bruteForceConvexHull(points) {
 }
 
 const BruteForceConvexHull = () => {
-    const [points, setPoints] = useState([]); // Initialize with an empty array
+    const [points, setPoints] = useState([]);
     const [hull, setHull] = useState([]);
     const [x, setX] = useState('');
     const [y, setY] = useState('');
+    const chartRef = useRef(null);
 
     const handleComputeHull = () => {
         setHull(bruteForceConvexHull(points));
@@ -84,12 +86,33 @@ const BruteForceConvexHull = () => {
         }
     };
 
+    const handleChartClick = (event) => {
+        const chart = chartRef.current;
+        if (!chart) return;
+
+        const { offsetX, offsetY } = event.native;
+        console.log('Chart scales:', chart.scales);
+        const xScale = chart.scales['x'];
+        const yScale = chart.scales['y'];
+
+        if (xScale && yScale) {
+            const xValue = xScale.getValueForPixel(offsetX);
+            const yValue = yScale.getValueForPixel(offsetY);
+            console.log('xValue:', xValue, 'yValue:', yValue);
+
+            const newPoint = new Point(xValue, yValue);
+            setPoints([...points, newPoint]);
+        } else {
+            console.error('Scales not found');
+        }
+    };
+
     const data = {
         datasets: [
             {
                 label: 'Points',
                 data: points.map(p => ({ x: p.x, y: p.y })),
-                backgroundColor: 'rgba(0,0,0)',
+                backgroundColor: 'rgba(0,0,0,1)',
             },
             {
                 label: 'Convex Hull',
@@ -102,23 +125,40 @@ const BruteForceConvexHull = () => {
         ]
     };
 
+    const options = {
+        responsive: true,
+        onClick: handleChartClick,
+        scales: {
+            x: {
+                type: 'linear',
+                position: 'bottom',
+            },
+            y: {
+                type: 'linear',
+                position: 'left',
+            }
+        }
+    };
+
     return (
-        <div>
-            <h2 className='title'>Convex Hull Visualization </h2>
+        <div >
+            <h2 className='title'>Convex Hull Visualization</h2>
             <div className="chart-container">
-                <Scatter data={data} options={{ responsive: true }} />
-
+                <Scatter ref={chartRef} data={data} options={options} />
             </div>
-            <label className='labelExplanation'>Enter the point (x,y) in the fields below then click + to view it on the chart</label>
-
+            <div className='questionmarkContainer'>
+                <ToolTipLabel />
+            </div>
             <div className='inputFields'>
-                <input className='inputPoint'
+                <input
+                    className='inputPoint'
                     type="number"
                     placeholder="X"
                     value={x}
                     onChange={(e) => setX(e.target.value)}
                 />
-                <input className='inputPoint'
+                <input
+                    className='inputPoint'
                     type="number"
                     placeholder="Y"
                     value={y}
@@ -126,7 +166,9 @@ const BruteForceConvexHull = () => {
                 />
                 <button className='btnAddPoint' onClick={handleAddPoint}>+</button>
             </div>
-            <button className='btnCompute' onClick={handleComputeHull}>Compute Convex Hull</button>
+            <button className='btnCompute' onClick={handleComputeHull}>
+                <p>compute convex hull</p>
+            </button>
         </div>
     );
 };
