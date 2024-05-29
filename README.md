@@ -5,4 +5,5 @@
 
 
 > [!TIP]
-> Access the react application through the [Convex Hull visualization website] (https://Suee18.github.io/convexHull.github.io/). to visualize the hulls to coordinates you insert via the dynamic graph.
+> Access the react application through the  to visualize the hulls to coordinates you insert via the dynamic graph.
+[Convex Hull visualization website] (https://Suee18.github.io/convexHull.github.io/).
