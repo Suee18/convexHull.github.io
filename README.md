@@ -5,7 +5,7 @@
 
 
 > [!TIP]
-> Access [the website]([https://pages.github.com/](https://suee18.github.io/convexHull.github.io/)) to visualize the hulls to coordinates you insert via the dynamic graph.
+> Access [the website](https://suee18.github.io/convexHull.github.io/) to visualize the hulls to coordinates you insert via the dynamic graph.
 
 
 
