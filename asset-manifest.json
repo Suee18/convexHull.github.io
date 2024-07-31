@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/convexHull.github.io/static/css/main.f560513d.css",
+    "main.css": "/convexHull.github.io/static/css/main.dc7f7a49.css",
     "main.js": "/convexHull.github.io/static/js/main.b7eb24e4.js",
     "static/js/453.ed3810f9.chunk.js": "/convexHull.github.io/static/js/453.ed3810f9.chunk.js",
     "static/media/AboveDemoRegular-lJMd.ttf": "/convexHull.github.io/static/media/AboveDemoRegular-lJMd.00812bcff1e355e53086.ttf",
@@ -8,12 +8,12 @@
     "static/media/divide.jpg": "/convexHull.github.io/static/media/divide.f4a1efcf9f31b3471b09.jpg",
     "static/media/bruteImg.jpg": "/convexHull.github.io/static/media/bruteImg.0272812d82b8128b4a7a.jpg",
     "index.html": "/convexHull.github.io/index.html",
-    "main.f560513d.css.map": "/convexHull.github.io/static/css/main.f560513d.css.map",
+    "main.dc7f7a49.css.map": "/convexHull.github.io/static/css/main.dc7f7a49.css.map",
     "main.b7eb24e4.js.map": "/convexHull.github.io/static/js/main.b7eb24e4.js.map",
     "453.ed3810f9.chunk.js.map": "/convexHull.github.io/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f560513d.css",
+    "static/css/main.dc7f7a49.css",
     "static/js/main.b7eb24e4.js"
   ]
 }
