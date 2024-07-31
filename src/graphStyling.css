@@ -242,10 +242,10 @@ button {
 
 .inp input:focus+.label {
     color: #0077FF;
-    transform: translate3d(0, -2px, 0) scale(0.75);
+    transform: translate3d(0, -10px, 0) scale(1);
 }
 
 .inp input:focus+.label+.focus-bg {
     transform: scaleX(1);
-    transition: all 0.1s ease;
+    transition: all 0.7s ease;
 }
