@@ -142,45 +142,69 @@ const BruteForceConvexHull = () => {
 
     return (
         <div className='bigbig'>
-        <div className='titleContainer'>           
-             <h2 className='title'>Convex Hull Visualization</h2>
-             <div className='questionmarkContainer'>
+            <div className='titleContainer'>
+                <h2 className='title'>Convex Hull Visualization</h2>
+                <div className='questionmarkContainer'>
                     <ToolTipLabel />
                 </div>
-                </div>
-
-        <div className='computeDisplayContainer'>
-            <div className="chart-container">
-                <Scatter ref={chartRef} data={data} options={options} />
             </div>
-                {/**********user input  BANNER*************/}
-            <div className='userInputFields'>
-                <div className='inputFields'>
-                    <input
-                        className='inputPoint'
-                        type="number"
-                        placeholder="X"
-                        value={x}
-                        onChange={(e) => setX(e.target.value)}
-                    />
-                    <input
-                        className='inputPoint'
-                        type="number"
-                        placeholder="Y"
-                        value={y}
-                        onChange={(e) => setY(e.target.value)}
-                    />
-                    <button className='btnAddPoint' onClick={handleAddPoint}>+</button>
+
+            <div className='computeDisplayContainer'>
+                <div className="chart-container">
+                    <Scatter ref={chartRef} data={data} options={options} />
                 </div>
-                <button className='btnCompute' onClick={handleComputeHull}>
-                    <p>compute convex hull</p>
-                </button>
-                {/* no js yet ⬇️*/}
-                <button className='clearChart'>
-                    <p>Clear chart </p>
+                {/**********user input  BANNER*************/}
+                <div className='userInputFields'>
+                    <div className='inputFields'>
+                        {/* <input
+                            className='inputPoint'
+                            type="number"
+                            placeholder="X"
+                            value={x}
+                            onChange={(e) => setX(e.target.value)}
+                        />
+                        <input
+                            className='inputPoint'
+                            type="number"
+                            placeholder="Y"
+                            value={y}
+                            onChange={(e) => setY(e.target.value)}
+                        /> */}
+                        <div className='XYcontainer'>
+                            <label className="inp">
+                                <input
+                                    className="inputPoint"
+                                    type="number"
+                                    placeholder="&nbsp;"
+                                    value={x}
+                                    onChange={(e) => setX(e.target.value)}
+                                />
+                                <span className="label">X</span>
+                                <span className="focus-bg"></span>
+                            </label>
+                            <label className="inp">
+                                <input
+                                    className="inputPoint"
+                                    type="number"
+                                    placeholder="&nbsp;"
+                                    value={y}
+                                    onChange={(e) => setY(e.target.value)}
+                                />
+                                <span className="label">Y</span>
+                                <span className="focus-bg"></span>
+                            </label>
+                        </div>
+                        <button className='btnAddPoint' onClick={handleAddPoint}>+</button>
+                    </div>
+                    <button className='btnCompute' onClick={handleComputeHull}>
+                        <p>compute convex hull</p>
                     </button>
-            </div> 
-        </div>
+                    {/* no js yet ⬇️*/}
+                    <button className='btnclearChart'>
+                        <p>Clear chart </p>
+                    </button>
+                </div>
+            </div>
         </div>
     );
 };

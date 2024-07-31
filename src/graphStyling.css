@@ -1,14 +1,16 @@
-.titleContainer{
+.titleContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     cursor: help;
 
 }
-.computeDisplayContainer{
+
+.computeDisplayContainer {
     display: flex;
     flex-direction: row;
 }
+
 .chart-container {
     width: 90vw;
     height: 80vh;
@@ -22,21 +24,22 @@
     margin-left: 2em;
 
 }
+
 /***********************userInputFields Banner***************** */
-.userInputFields
-{
+.userInputFields {
     margin-top: 6rem;
     margin-right: 2rem;
     margin-left: 1rem;
-    background-color: #557dcc;
+    background-color: #304352;
     border-radius: 4%;
     height: 20rem;
-    width:20rem;
+    width: 20rem;
     box-shadow: 15px 12px 5px rgba(15, 38, 167, 0.438);
 }
-/* .labelExplanation 
+
+/* .labelExplanation
 {
-font-family: infoFont;  
+font-family: infoFont;
   cursor:help;
     font-size: 1.5em;
     margin-top: 5rem;
@@ -44,32 +47,44 @@ font-family: infoFont;
 
 } */
 
-.btnAddPoint 
-{
+.btnAddPoint {
     width: 3rem;
     height: 3rem;
-    /* margin-left: 2rem; */
+    margin-left: 7rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     border-radius: 2rem;
     color: white;
-    background-color: #182746;
+    background-color: #5678bb;
     border-color: beige;
     cursor: pointer;
     font-weight: bold;
+    border: 10px inset rgba(170, 163, 163, 0.274);
+    font-size: 1.5em;
 }
 
 .btnAddPoint:hover {
+    background-color: #3c30e0;
+}
+
+.btnAddPoint:active {
     background-color: #1f1d3a;
+    transform: perspective(2px) scale(0.8);
+
 }
 
-.inputPoint 
-{
-    /* margin-top: 1rem; */
+/* .inputPoint {
+     margin-top: 2rem; 
+    height:1.7rem;
+    width:5rem;
     margin-left: 2rem;
-    background-color: aliceblue;
-}
+    background-color: rgb(240, 248, 255);
+    border-radius: 0.5rem;
+    border: 3px solid rgb(196, 196, 196);
 
-.inputFields
-{
+} */
+
+.inputFields {
     /* margin-left: 450px; */
 
 }
@@ -87,117 +102,140 @@ button {
     padding: 0;
     border: none;
     outline: none;
-    color: inherit;
+    /* color: inherit; */
     width: 200px;
     height: 60px;
     cursor: pointer;
     font-size: 16px;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     font-family: infoFont;
-
+    font-weight: 600;
+    font-size: 120%;
+    color: #182746;
+    background-color: #cbd3e2;
+    border-radius: 2rem;
+    text-shadow: 1px 1px 1px rgb(23, 80, 117);
 }
 
-.btnCompute 
-{
-    border: 2px solid rgb(28, 22, 53);
-    animation: 0.5s collision ease-in;
+.btnCompute {
+    border: 2px solid rgba(255, 99, 132, 1);
     overflow: hidden;
     transition: 0.3s 0.1s;
-    /* margin-left:600px; */
+    margin-left: 2.2rem;
 }
 
-.btnCompute:active
-{
-    transform: translateX(100px);
-    background: rgba(255, 255, 255, 0.5);
+.btnCompute:hover {
+    background-color: #0d3277;
+    color: #cbd3e2
 }
 
-.btnCompute p 
-{
+.btnCompute:active {
+    /* transform: translateX(10px); */
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    background: rgba(63, 59, 59, 0.5);
+}
 
+/* ****** clear chart button */
+.btnclearChart {
+    margin-left: 2.2rem;
+
+}
+
+.btnclearChart:hover {
+    background: crimson;
+    border-color: crimson;
+    color: rgb(0, 0, 0);
+}
+
+.btnclearChart:active {
+    background: rgba(252, 72, 72, 0.432);
+    transform: scale(0.2)
+}
+
+
+/******(X,Y)******/
+.XYcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+    /* margin-left: 1rem; */
+}
+
+.inp {
     position: relative;
-    color: black;
-    font-weight: 700;
-    font-size: 1.2rem;
-    z-index: 5;
-    transition: 1s ease-in-out;
+    margin: auto;
+    width: 5rem;
+    height: 2rem;
+    /* max-width: 280px; */
+    overflow: hidden; 
+    padding: 4%;
 }
 
-.btnCompute:hover p {
-    color: #fff;  
-    font-size: 10px;    
+.inp .label {
     
-}
-
-.btnCompute:before,
-.btnCompute:after {
-    content: "";
+    /* height: 2rem; */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background-color: rgb(33, 34, 75);
+    top: 20px;
+    left: 12px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    transform-origin: 0 0;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+    pointer-events: none;
+
 }
 
-.btnCompute:hover:before {
-    animation: collisionLeft 1s both;
-    animation-direction: alternate;
+.inp .focus-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
 }
 
-.btnCompute:hover:after {
-    animation: collisionRight 1s both;
-    animation-direction: alternate;
+.inp input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 1rem;
+    width: 5rem;
+    border: 0;
+    font-family: inherit;
+    padding: 16px 12px 0 12px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgba(245, 245, 245, 0.274);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    transition: all 0.15s ease;
 }
 
-.btnCompute:before {
-    left: -30%;
+.inp input:hover {
+    background: rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
 }
 
-.btnCompute:after {
-    left: 125%;
+.inp input:focus {
+    background: rgba(0, 0, 0, 0.05);
+    outline: none;
+    box-shadow: inset 0 -2px 0 #0077FF;
 }
 
-@keyframes collisionLeft {
-    0% {
-        left: -30%;
-        width: 20px;
-        height: 20px;
-    }
-
-    50% {
-        left: 50%;
-        width: 40px;
-        height: 40px;
-    }
-
-    100% {
-        left: 50%;
-        width: 300px;
-        height: 300px;
-    }
+.inp input:focus+.label {
+    color: #0077FF;
+    transform: translate3d(0, -2px, 0) scale(0.75);
 }
 
-@keyframes collisionRight {
-    0% {
-        left: 125%;
-        width: 20px;
-        height: 20px;
-    }
-
-    50% {
-        left: 50%;
-        width: 40px;
-        height: 40px;
-    }
-
-    100% {
-        left: 50%;
-        width: 300px;
-        height: 300px;
-    }
+.inp input:focus+.label+.focus-bg {
+    transform: scaleX(1);
+    transition: all 0.1s ease;
 }
-
