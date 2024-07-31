@@ -115,7 +115,7 @@ button {
     color: #182746;
     background-color: #cbd3e2;
     border-radius: 2rem;
-    text-shadow: 1px 1px 1px rgb(23, 80, 117);
+    /* text-shadow: 1px 1px 1px rgb(23, 80, 117); */
 }
 
 .btnCompute {
