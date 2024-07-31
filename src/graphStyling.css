@@ -1,7 +1,19 @@
+.titleContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: help;
+
+}
+.computeDisplayContainer{
+    display: flex;
+    flex-direction: row;
+}
 .chart-container {
     width: 90vw;
-    height: 70vh;
-    margin-left: 10em;
+    height: 80vh;
+    /* margin-left: 10em; */
+    margin-left: 1rem;
 }
 
 .title {
@@ -10,8 +22,19 @@
     margin-left: 2em;
 
 }
-
-.labelExplanation 
+/***********************userInputFields Banner***************** */
+.userInputFields
+{
+    margin-top: 6rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
+    background-color: #557dcc;
+    border-radius: 4%;
+    height: 20rem;
+    width:20rem;
+    box-shadow: 15px 12px 5px rgba(15, 38, 167, 0.438);
+}
+/* .labelExplanation 
 {
 font-family: infoFont;  
   cursor:help;
@@ -19,13 +42,13 @@ font-family: infoFont;
     margin-top: 5rem;
     margin-left: 12em;
 
-}
+} */
 
 .btnAddPoint 
 {
     width: 3rem;
     height: 3rem;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
     border-radius: 2rem;
     color: white;
     background-color: #182746;
@@ -47,7 +70,7 @@ font-family: infoFont;
 
 .inputFields
 {
-    margin-left: 450px;
+    /* margin-left: 450px; */
 
 }
 
@@ -81,7 +104,7 @@ button {
     animation: 0.5s collision ease-in;
     overflow: hidden;
     transition: 0.3s 0.1s;
-    margin-left:600px;
+    /* margin-left:600px; */
 }
 
 .btnCompute:active

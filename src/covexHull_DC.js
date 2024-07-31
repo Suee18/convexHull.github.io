@@ -141,34 +141,46 @@ const BruteForceConvexHull = () => {
     };
 
     return (
-        <div >
-            <h2 className='title'>Convex Hull Visualization</h2>
+        <div className='bigbig'>
+        <div className='titleContainer'>           
+             <h2 className='title'>Convex Hull Visualization</h2>
+             <div className='questionmarkContainer'>
+                    <ToolTipLabel />
+                </div>
+                </div>
+
+        <div className='computeDisplayContainer'>
             <div className="chart-container">
                 <Scatter ref={chartRef} data={data} options={options} />
             </div>
-            <div className='questionmarkContainer'>
-                <ToolTipLabel />
-            </div>
-            <div className='inputFields'>
-                <input
-                    className='inputPoint'
-                    type="number"
-                    placeholder="X"
-                    value={x}
-                    onChange={(e) => setX(e.target.value)}
-                />
-                <input
-                    className='inputPoint'
-                    type="number"
-                    placeholder="Y"
-                    value={y}
-                    onChange={(e) => setY(e.target.value)}
-                />
-                <button className='btnAddPoint' onClick={handleAddPoint}>+</button>
-            </div>
-            <button className='btnCompute' onClick={handleComputeHull}>
-                <p>compute convex hull</p>
-            </button>
+                {/**********user input  BANNER*************/}
+            <div className='userInputFields'>
+                <div className='inputFields'>
+                    <input
+                        className='inputPoint'
+                        type="number"
+                        placeholder="X"
+                        value={x}
+                        onChange={(e) => setX(e.target.value)}
+                    />
+                    <input
+                        className='inputPoint'
+                        type="number"
+                        placeholder="Y"
+                        value={y}
+                        onChange={(e) => setY(e.target.value)}
+                    />
+                    <button className='btnAddPoint' onClick={handleAddPoint}>+</button>
+                </div>
+                <button className='btnCompute' onClick={handleComputeHull}>
+                    <p>compute convex hull</p>
+                </button>
+                {/* no js yet ⬇️*/}
+                <button className='clearChart'>
+                    <p>Clear chart </p>
+                    </button>
+            </div> 
+        </div>
         </div>
     );
 };
