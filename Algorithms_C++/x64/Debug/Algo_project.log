@@ -1,0 +1,4 @@
+﻿  Algo_project.cpp
+C:\Users\shex\Desktop\CS\Algo\salma Codes\Algo_project\Algo_project.cpp(60,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\shex\Desktop\CS\Algo\salma Codes\Algo_project\Algo_project.cpp(73,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Algo_project.vcxproj -> C:\Users\shex\Desktop\CS\Algo\salma Codes\Algo_project\x64\Debug\Algo_project.exe
