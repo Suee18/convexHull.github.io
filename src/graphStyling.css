@@ -4,11 +4,15 @@
     justify-content: center;
     cursor: help;
 
+
 }
 
 .computeDisplayContainer {
     display: flex;
     flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .chart-container {
@@ -35,6 +39,7 @@
     height: 20rem;
     width: 20rem;
     box-shadow: 15px 12px 5px rgba(15, 38, 167, 0.438);
+
 }
 
 /* .labelExplanation
@@ -116,6 +121,7 @@ button {
     background-color: #cbd3e2;
     border-radius: 2rem;
     /* text-shadow: 1px 1px 1px rgb(23, 80, 117); */
+
 }
 
 .btnCompute {
@@ -139,6 +145,7 @@ button {
 /* ****** clear chart button */
 .btnclearChart {
     margin-left: 2.2rem;
+
 
 }
 
@@ -168,13 +175,14 @@ button {
     margin: auto;
     width: 5rem;
     height: 2rem;
-    /* max-width: 280px; */
-    overflow: hidden; 
+    max-width: 280px;
+    overflow: hidden;
     padding: 4%;
+
 }
 
 .inp .label {
-    
+
     /* height: 2rem; */
     position: absolute;
     top: 20px;
@@ -190,6 +198,7 @@ button {
 }
 
 .inp .focus-bg {
+
     position: absolute;
     top: 0;
     left: 0;
@@ -217,6 +226,7 @@ button {
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
     color: #ffffff;
     transition: all 0.15s ease;
+
 }
 
 .inp input:hover {
