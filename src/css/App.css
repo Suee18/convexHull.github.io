@@ -1,0 +1,59 @@
+.App {
+  background-image: linear-gradient(to bottom, #304352 20%, #d8d8d8 100%);
+  height: 100%;
+  overflow-x: hidden;
+
+}
+
+.App-header {
+  background-color: #0a1436b0;
+  height: 14vh;
+
+}
+
+.scrollDown {
+  background-color: rgba(255, 255, 255, 0.822);
+  color: rgb(12, 9, 54);
+  width: 20em;
+  height: 3em;
+  margin-left: 70%;
+  font-size: 150%;
+  margin-top: 0.5rem;
+  cursor: pointer;
+
+}
+
+.scrollDown:hover {
+  background-color: rgb(255, 255, 255);
+  color: #0a1436;
+}
+
+.userControlPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 0 10rem; */
+}
+
+.headerCoponents {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rem;
+  height: 10vh;
+}
+
+.questionmarkContainer {
+  margin-left: 2em;
+  margin-top: 5em;
+}
+
+.App-footer {
+  background-color: #0a1436f3;
+  height: 14vh;
+  color: thistle;
+  /* padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0; */
+}

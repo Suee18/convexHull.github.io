@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Scatter } from 'react-chartjs-2';
 import { Chart as ChartJS, PointElement, LineElement, LinearScale, Title, Tooltip, Legend } from 'chart.js';
-import './graphStyling.css';
+import './css/graphStyling.css';
 import ToolTipLabel from './ToolTipLabel';
 
 ChartJS.register(PointElement, LineElement, LinearScale, Title, Tooltip, Legend);

@@ -1,16 +1,10 @@
-// import React from 'react';
-// import 'landingPage.css';
 
-// function sayHello() {
-//     return <label>Hello</label>;
-// }
-
-// export default sayHello;
 import React from 'react';
-import './landingPage.css';
-import divideImg from './divide.jpg';
-import bruteImg from './bruteImg.jpg';
-import rotato from './download1.png';
+import './css/landingPage.css';
+import divideImg from './media/divide.jpg';
+import bruteImg from './media/bruteImg.jpg';
+import rotato from './media/download1.png';
+
 const LandingPage = () => {
   return (
     <div>
@@ -18,18 +12,18 @@ const LandingPage = () => {
       <div className="rotate-container1">
         <img id="rotatingImg1" src={rotato} alt="Rotating" />
       </div>
+      <div className="page1BG">
+        <h1>Convex Hull Algorithm Computations</h1>
 
-      <h1>Convex Hull Algorithm Computations</h1>
-
-      <p className="intro">
-        The convex hull is a fundamental problem in computational geometry with various applications in diverse fields such as
-        computer vision, robotics, and geographic information systems. It is a geometric concept that represents the smallest
-        convex polygon enclosing a given set of points in a plane.<br />
-        The importance of the convex hull arises from its ability to
-        simplify complex point sets into a concise representation, enabling efficient analysis and decision-making. We compare the performance of the divide and conquer
-        and brute force algorithms for computing the convex hull by conducting experiments on different point sets and analyzing the results.
-      </p>
-
+        <p className="intro">
+          The convex hull is a fundamental problem in computational geometry with various applications in diverse fields such as
+          computer vision, robotics, and geographic information systems. It is a geometric concept that represents the smallest
+          convex polygon enclosing a given set of points in a plane.<br />
+          The importance of the convex hull arises from its ability to
+          simplify complex point sets into a concise representation, enabling efficient analysis and decision-making. We compare the performance of the divide and conquer
+          and brute force algorithms for computing the convex hull by conducting experiments on different point sets and analyzing the results.
+        </p>
+      </div>
       <div className="container">
         <section className="brute">
           <h2>Brute Force Approach</h2>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './ToolTipLabel.css'; // Make sure to create this CSS file
+import './css/ToolTipLabel.css'; // Make sure to create this CSS file
 
 function ToolTipLabel() {
   return (

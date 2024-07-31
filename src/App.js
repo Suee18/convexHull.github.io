@@ -1,8 +1,8 @@
 
 import React, { useRef } from 'react';
-import BruteForceConvexHull from './covexHull_DC.js'; 
+import BruteForceConvexHull from './covexHull_DC.js';
 import LandingPage from './landingPage.js';
-import './App.css';
+import './css/App.css';
 
 function App() {
     const bruteForceRef = useRef(null);
@@ -16,14 +16,19 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-               <div className='headerCoponents'> <button className="scrollDown" onClick={scrollToBruteForce}>Go to Visualization ⬇</button></div>
+                <div className='headerCoponents'>
+                    <button className="scrollDown" onClick={scrollToBruteForce}>Go to Visualization ⬇</button>
+                </div>
             </header>
             <main>
-                <LandingPage /> 
+                <LandingPage />
                 <div ref={bruteForceRef}>
-                    <BruteForceConvexHull /> 
+                    <BruteForceConvexHull />
                 </div>
             </main>
+            <footer className="App-footer">
+                <p>FOOTER CONTENT</p>
+            </footer>
         </div>
     );
 }
