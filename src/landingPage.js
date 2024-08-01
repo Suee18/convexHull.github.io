@@ -5,6 +5,7 @@ import divideImg from './media/divide.jpg';
 import bruteImg from './media/bruteImg.jpg';
 import rotato from './media/download1.png';
 
+
 const LandingPage = () => {
   return (
     <div>
@@ -24,6 +25,9 @@ const LandingPage = () => {
           and brute force algorithms for computing the convex hull by conducting experiments on different point sets and analyzing the results.
         </p>
       </div>
+
+
+      {/*********** ******** BRUTE FORCE INFO  */}
       <div className="container">
         <section className="brute">
           <h2>Brute Force Approach</h2>
@@ -42,6 +46,7 @@ const LandingPage = () => {
             <li className="bImg"><img className="bruteImg" src={bruteImg} alt="Brute Force Approach" /></li>
           </ul>
         </section>
+        {/*********** ******** DIVIDE INFO  */}
 
         <section className="divide">
           <h2>Divide and Conquer Approach</h2>
@@ -60,7 +65,9 @@ const LandingPage = () => {
             <li className="dImg"><img className="divideImg" src={divideImg} alt="Divide and Conquer Approach" /></li>
           </ul>
         </section>
-      </div>
+      </div>  {/*  OG PARAGRAPHS  */}
+
+
     </div>
   );
 };
