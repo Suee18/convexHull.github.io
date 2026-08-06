@@ -1,41 +1,86 @@
-.tooltip-container {
+.help-menu {
   position: relative;
-  display: inline-block;
 }
 
-.labelExplanation {
+.help-menu summary {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--muted-strong);
   cursor: pointer;
-  width: 5em;
-  font-size: 2em;
-  /* Adjust size as needed */
-  font-weight: bold;
-  border-radius: 2em;
-  background-color: #55555500;
-  border-color: #1420a8;
-  border-style: outset;
+  font-family: var(--mono);
+  font-size: 12px;
+  list-style: none;
+  transition: color .2s ease, border-color .2s ease, background .2s ease;
 }
 
-.tooltip-text {
-  visibility: hidden;
-  width: 15em;
-  /* Adjust width as needed */
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px 0;
+.help-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.help-menu summary:hover,
+.help-menu[open] summary {
+  border-color: var(--coral);
+  color: var(--coral-light);
+  background: rgba(255, 107, 74, .08);
+}
+
+.help-popover {
   position: absolute;
-  z-index: 1;
-  /* bottom: 10%;  */
-  /*Position the tooltip above the text */
-  left: 150%;
-  margin-left: 7%;
-  /* Use half of the width value to center the tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
+  z-index: 30;
+  top: calc(100% + 14px);
+  right: 0;
+  width: 280px;
+  padding: 20px;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  background: #132636;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .38);
+  font-size: 11px;
+  line-height: 1.6;
 }
 
-.tooltip-container:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
+.help-popover::before {
+  position: absolute;
+  top: -5px;
+  right: 11px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid var(--line-strong);
+  border-left: 1px solid var(--line-strong);
+  content: "";
+  transform: rotate(45deg);
+  background: #132636;
+}
+
+.help-popover strong {
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.help-popover ol {
+  margin: 12px 0;
+  padding-left: 18px;
+}
+
+.help-popover p {
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--coral-light);
+}
+
+@media (max-width: 520px) {
+  .help-popover {
+    position: fixed;
+    top: 80px;
+    right: 16px;
+    left: 16px;
+    width: auto;
+  }
+
+  .help-popover::before { display: none; }
 }
