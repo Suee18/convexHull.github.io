@@ -1,16 +1,20 @@
 import React from 'react';
-import './css/ToolTipLabel.css'; // Make sure to create this CSS file
+import './css/ToolTipLabel.css';
 
 function ToolTipLabel() {
   return (
-    <div className="tooltip-container">
-      <label className="labelExplanation">?</label>
-      <span className="tooltip-text"> Usage:
-        <br />
-        1) Enter points in form of (x,y) and press + to view them on coordinates. To update the hull, click on compute convex hull button.
-        <br />
-        2) Click on the chart coordinates to add points then click on compute convex hull button.</span>
-    </div>
+    <details className="help-menu">
+      <summary aria-label="How to use the visualizer">?</summary>
+      <div className="help-popover">
+        <strong>How to use the lab</strong>
+        <ol>
+          <li>Click on the grid or enter an X/Y pair.</li>
+          <li>Add at least three distinct points.</li>
+          <li>Compute to reveal the outer boundary.</li>
+        </ol>
+        <p>Tip: use Random set for a quick demo.</p>
+      </div>
+    </details>
   );
 }
 
